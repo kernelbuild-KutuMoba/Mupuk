@@ -5,7 +5,7 @@ token="5445531176:AAGwd6pVM-UoDrNos3R00QSlr0KuffkZLMY"
 chat_id="-1001921678002"
 
 #
-TANGGAL_MULAI="2026-07-30" 
+TANGGAL_MULAI="2026-08-01" 
 
 detik_mulai=$(date -d "$TANGGAL_MULAI" +%s)
 detik_target=$((detik_mulai + 5184000)) # 60 hari dalam detik
