@@ -1,0 +1,19 @@
+name: Pengingat 60 Hari
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Berjalan otomatis sekali sehari jam 07:00 WIB
+  workflow_dispatch:     # Tombol jalankan manual
+
+jobs:
+  eksekusi-skrip:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Ambil Kode dari Repositori
+      uses: actions/checkout@v4.2.2 # <--- Diperbarui ke versi spesifik terbaru untuk mendukung Node 24
+
+    - name: Berikan Izin Akses Eksekusi Skrip
+      run: chmod +x mupuk.sh
+
+    - name: Jalankan Pengecekan Tanggal
+      run: bash mupuk.sh
